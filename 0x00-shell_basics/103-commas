@@ -1,2 +1,2 @@
 #!/bin/bash
-{ find . -name '.*' -printf "%p, " -type d -printf "/\n" -o -printf "%f, " -type f -printf "\n"; find . ! -name '.*' -printf "%p, " -type d -printf "/\n" -o -printf "%f, " -type f -printf "\n"; } | sort -k1.1n -k1.2d | sed -E 's/(.*)\/\.$/\1\/\//g' | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/, /g' | sed -E 's/, \.$/\n/g'
+ls -amvp
