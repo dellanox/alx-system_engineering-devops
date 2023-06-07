@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -maxdepth 1 -type d -printf "%f/, " -o -type f  -printf "%f, " sort -n sed 's/, /\\n'
+ls -Ap | grep -v / | sort -V | tr '\n' ', ' && echo
