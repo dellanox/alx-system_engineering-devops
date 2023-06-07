@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -A
+find . -type d -printf "%p/\n" -o -type f | sort -V | tr '\n' ', ' | sed 's/,$/\n/'
