@@ -1,2 +1,4 @@
 #!/bin/bash
-find . -maxdepth 1 -printf "%f" | sort -df | paste -sd "," - | sed 's/,$/\n/'
+find . -type d -printf "%p/" -o -type f -printf "%p" | sort -nr | sed 's/$/,/'
+
+
