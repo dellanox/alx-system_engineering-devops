@@ -1,4 +1,2 @@
 #!/bin/bash
-ls -Ap1 | grep -v "^.." | grep "/"; ls -Ap1 | grep -v "^.." | grep -v "/" | LC_ALL=C sort -df | paste -sd ", " -
-
-
+find . -maxdepth 1 -type d -printf "%f/, " -o -type f  -printf "%f, " sort -n sed 's/, /\\n'
