@@ -1,2 +1,2 @@
 #!/bin/bash
-printf '%s\n' */ ./* | sort -V | paste -sd ', '
+{ printf '%s\n' */ ./* | sort -V | paste -sd ', '; echo; }
