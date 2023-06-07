@@ -1,2 +1,2 @@
 #!/bin/bash
-{ printf '%s\n' */ ./* | sort -V | paste -sd ', '; echo; }
+find . -maxdepth 1 -type d -printf "%f/, " -o -type f -printf "%f, " | sort -n | sed 's/, /\\n/g'
