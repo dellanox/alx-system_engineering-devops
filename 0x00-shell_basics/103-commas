@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -maxdepth 1 -type d -printf "%f/, " -o -type f  -printf "%f, " sort -n sed 's/, /\\n'
+find . -maxdepth 1 -type d -printf "%f/, " -o -type f sort -n -printf "%f, "  sed 's/, /\\n'
