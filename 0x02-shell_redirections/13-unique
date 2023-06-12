@@ -1,2 +1,2 @@
 #!/bin/bash
-sort -Vuc --files0-from=- | tr ',' '\n'
+sort | uniq -u
