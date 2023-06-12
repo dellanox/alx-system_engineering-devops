@@ -1,0 +1,45 @@
+#!/bin/bash
+echo "Hello, World"
+#!/bin/bash
+find . -type f -name "*.js" -delete
+#!/bin/bash
+find . -type d -not -path "./.*" -not -path "." -not -path ".." | wc -l
+#!/bin/bash
+ls -lt1 . | head -n 10
+#!/bin/bash
+sort -r | uniq -u
+#!/bin/bash
+echo "\"(Ôo)'"
+#!/bin/bash
+cat /etc/passwd
+#!/bin/bash
+cat /etc/passwd /etc/hosts
+#!/bin/bash
+tail /etc/passwd
+#!/bin/bash
+head /etc/passwd
+#!/bin/bash
+cat iacta | head -n 3 | tail -n 1
+#!/bin/bash
+echo "Best School" > \\\*\\\\"'\"Best School\"\\'"\\\\\*\$\\\?\\\*\\\*\\\*\\\*\\\*:\)
+#!/bin/bash
+ls -la > ls_cwd_content
+#!/bin/bash
+tail -n 1 < iacta >> iacta
+0-hello_world
+1-confused_smiley
+2-hellofile
+3-twofiles
+4-lastlines
+5-firstlines
+6-third_line
+7-file
+8-cwd_state
+9-duplicate_last_line
+10-no_more_js
+11-directories
+12-newest_files
+13-unique
+README.md
+filelist.txt
+Shell redirection tasks
