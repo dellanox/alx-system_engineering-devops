@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -empty | cut -d '/' -f 1
+find . -type f -empty -name "*.gif" | tr -d '.gif' | LC_ALL=C sort -f | -printf "%s\n" 
