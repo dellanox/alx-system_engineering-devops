@@ -1,2 +1,2 @@
 #!/bin/bash
-tr 'ACac' 'ZEze' <<< "$1"
+echo "$1" | tr 'Acac' 'Zeze'
