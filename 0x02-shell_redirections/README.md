@@ -1,3 +1,4 @@
+
 # 0x02. Shell, I/O Redirections and Filters
 
 ## About Bash Projects
@@ -78,6 +79,7 @@ Note: You do not have to learn about `fmt`, `pr`, `du`, `gzip`, `tar`, `lpr`, `s
 ```bash
 #!/bin/bash
 echo "Hello, World"
+```
 
 
 ### 1-confused_smiley
@@ -88,6 +90,7 @@ echo "Hello, World"
 ```bash
 #!/bin/bash
 echo -e "\"(\u00d4o)'"
+```
 
 ### 2-hellofile
 
@@ -97,6 +100,7 @@ echo -e "\"(\u00d4o)'"
 ```bash
 #!/bin/bash
 cat /etc/passwd
+```
 
 ### 3-twofiles
 
@@ -106,6 +110,7 @@ cat /etc/passwd
 ```bash
 #!/bin/bash
 cat /etc/passwd /etc/hosts
+```
 
 ### 4-lastlines
 
@@ -115,6 +120,7 @@ cat /etc/passwd /etc/hosts
 ```bash
 #!/bin/bash
 tail /etc/passwd
+```
 
 ### 5-firstlines
 
@@ -124,6 +130,7 @@ tail /etc/passwd
 ```bash
 #!/bin/bash
 head /etc/passwd
+```
 
 ### 6-third_line
 
@@ -132,6 +139,7 @@ head /etc/passwd
 ```bash
 #!/bin/bash
 cat iacta | head -n 3 | tail -n 1
+```
 
 ### 7-file
 
@@ -140,6 +148,7 @@ cat iacta | head -n 3 | tail -n 1
 ```bash
 #!/bin/bash
 echo "Best School" > \\\*\\\\"'\"Best School\"\\'"\\\\\*\$\\\?\\\*\\\*\\\*\\\*\\\*:\)
+```
 
 ### 8-cwd_state
 
@@ -148,6 +157,7 @@ echo "Best School" > \\\*\\\\"'\"Best School\"\\'"\\\\\*\$\\\?\\\*\\\*\\\*\\\*\\
 ```bash
 #!/bin/bash
 ls -la > ls_cwd_content
+```
 
 ### 9-duplicate_last_line
 
@@ -156,6 +166,7 @@ ls -la > ls_cwd_content
 ```bash
 #!/bin/bash
 tail -n 1 < iacta >> iacta
+```
 
 ### 10-no_more_js
 
@@ -164,6 +175,7 @@ tail -n 1 < iacta >> iacta
 ```bash
 #!/bin/bash
 find . -type f -name "*.js" -delete
+```
 
 ### 11-directories
 
@@ -172,6 +184,7 @@ find . -type f -name "*.js" -delete
 ```bash
 #!/bin/bash
 find . -type d -not -path "./.*" -not -path "." -not -path ".." | wc -l
+```
 
 ### 12-newest_files
 
@@ -180,6 +193,7 @@ find . -type d -not -path "./.*" -not -path "." -not -path ".." | wc -l
 ```bash
 #!/bin/bash
 ls -t1 | head
+```
 
 ### 13-unique
 
@@ -188,6 +202,7 @@ ls -t1 | head
 ```bash
 #!/bin/bash
 sort | uniq -u
+```
 
 ### 14-findthatword
 
@@ -196,6 +211,7 @@ sort | uniq -u
 ```bash
 #!/bin/bash
 grep "root" /etc/passwd
+```
 
 ### 15-countthatword
 
@@ -204,6 +220,7 @@ grep "root" /etc/passwd
 ```bash
 #!/bin/bash
 grep -c "bin" /etc/passwd
+```
 
 ### 16-whatsnext
 
@@ -212,11 +229,13 @@ grep -c "bin" /etc/passwd
 ```bash
 #!/bin/bash
 grep -A3 'root' /etc/passwd
+```
 
 File: ./17-hidethisword
 -------------------------
 #!/bin/bash
 grep -v "bin" /etc/passwd
+```
 
 ### 18-letteronly
 
@@ -225,6 +244,7 @@ grep -v "bin" /etc/passwd
 ```bash
 #!/bin/bash
 grep -i '^[[:alpha:]]' /etc/ssh/sshd_config
+```
 
 ### 19-AZ
 
@@ -233,6 +253,7 @@ grep -i '^[[:alpha:]]' /etc/ssh/sshd_config
 ```bash
 #!/bin/bash
 tr "Ac" "Ze"
+```
 
 ### 20-hiago
 
@@ -241,6 +262,7 @@ tr "Ac" "Ze"
 ```bash
 #!/bin/bash
 tr -d "cC"
+```
 
 
 ### 21-reverse
@@ -250,6 +272,7 @@ tr -d "cC"
 ```bash
 #!/bin/bash
 rev
+```
 
 
 ### 22-users_and_homes
@@ -259,6 +282,7 @@ rev
 ```bash
 #!/bin/bash
 cut -d ':' -f 1,6 /etc/passwd | sort
+```
 
 
 ### 100-empty_casks
@@ -268,6 +292,7 @@ cut -d ':' -f 1,6 /etc/passwd | sort
 ```bash
 #!/bin/bash
 find . -type f,d -empty -printf "%f\n"
+```
 
 
 ### 101-gifs
@@ -277,6 +302,7 @@ find . -type f,d -empty -printf "%f\n"
 ```bash
 #!/bin/bash
 find . -type f -empty -iname "*.gif" -printf "%f\n" | tr -d '.gif' | LC_ALL=C sort -fV | printf '%s\n'
+```
 
 ### 102-acrostic
 
@@ -285,6 +311,7 @@ find . -type f -empty -iname "*.gif" -printf "%f\n" | tr -d '.gif' | LC_ALL=C so
 ```bash
 #!/bin/bash
 cut -c 1 | paste -s -d ''
+```
 
 
 ### 103-the_biggest_fan
@@ -294,6 +321,7 @@ cut -c 1 | paste -s -d ''
 ```bash
 #!/bin/bash
 tail -n +2 | cut -f -1 | sort -k 1 | uniq -c | sort -rnk 1 | head -n 11 | rev | cut -d ' ' -f -1 | rev
+```
 
 
 
@@ -304,6 +332,11 @@ tail -n +2 | cut -f -1 | sort -k 1 | uniq -c | sort -rnk 1 | head -n 11 | rev | 
 ## License
 
 This project is licensed under the [--- License](https://opensource.org/licenses/---)- see the [LICENSE](LICENSE) file for details.
+
+
+
+
+
 
 
 
