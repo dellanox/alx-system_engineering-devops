@@ -1,2 +1,3 @@
 #!/bin/bash
-LC_ALL=C sort -f < <(find . -type f \( -iname "*.gif" -o -name ".*.gif" \) -printf "%f\n" | rename 's/\.gif$//')
+find . -type f \( -iname "*.gif" -o -name ".*.gif" \) -printf "%f\n" | rename .gif '' *.gif' | LC_ALL=C sort -f
+
