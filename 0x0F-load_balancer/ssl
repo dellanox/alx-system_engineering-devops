@@ -1,0 +1,28 @@
+# Prepare packages before installation
+sudo apt update
+
+#Install snapd
+sudo apt install snapd
+
+# Clean up existing certbot
+sudo apt-get remove certbot
+
+# Install fresh certbots
+sudo apt-get install certbot
+
+# Stop Haproxy to free up port 80
+sudo service haproxy stop
+
+
+#Run certbot 
+sudo certbot certonly --standalone --preferred-challenges http --http-01-port 80 -d dellanox.tech -d www.dellanox.tech
+
+sudo ls /etc/letsencrypt/live/www.dellanox.tech
+
+sudo mkdir -p /etc/haproxy/certs
+
+DOMAIN='www.dellanox.tech' sudo -E bash -c 'cat /etc/letsencrypt/live/$DOMAIN/fullchain.pem /etc/letsencrypt/live/$DOMAIN/privkey.pem > /etc/haproxy/certs/$DOMAIN.pem'
+
+sudo chmod -R go-rwx /etc/haproxy/certs
+
+sudo nano /etc/haproxy/haproxy.cfg
