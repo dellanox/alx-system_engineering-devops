@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Server-01 login commands
+# Load balancer-01 login commands
 
 # Setting up the SSH-agent
 eval $("ssh-agent")
@@ -7,5 +7,5 @@ eval $("ssh-agent")
 # Path to IdentityFile
 ssh-add ~/.ssh/school
 
-# Username and IP Address 
-ssh ubuntu@100.26.136.168
+#Username and IP Address
+ssh ubuntu@54.236.51.97
