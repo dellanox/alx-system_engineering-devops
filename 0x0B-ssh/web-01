@@ -7,5 +7,5 @@ eval $("ssh-agent")
 # Path to identityFile
 ssh-add ~/.ssh/school
 
-# Username and IP Address 
-ssh ubuntu@54.83.166.72
+# Username and IP Address
+ssh ubuntu@54.237.56.180

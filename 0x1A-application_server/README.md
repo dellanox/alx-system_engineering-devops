@@ -1,2 +1,2 @@
-# Application server
+# Application server project
 
