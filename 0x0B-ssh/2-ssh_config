@@ -33,4 +33,4 @@ Host *
     SendEnv LANG LC_*
     HashKnownHosts yes
     GSSAPIAuthentication yes
-#   PubKeyAuthentication yes
+#   PubKeyAuthentication no
