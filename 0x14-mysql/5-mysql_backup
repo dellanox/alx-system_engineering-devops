@@ -30,17 +30,8 @@ tar -czvf "${ARCHIVE_FILE}" "${DUMP_FILE}"
 # Verify if the archive was successfully created
 if [ $? -eq 0 ]; then
     echo "Backup successful: ${ARCHIVE_FILE}"
-
-    # Check the file type of the archive to ensure it's gzip compressed
-    FILE_TYPE=$(file "${ARCHIVE_FILE}")
-
-    # Verify that the output contains "gzip compressed data, from Unix"
-    if [[ "$FILE_TYPE" == *"gzip compressed data, from Unix"* ]]; then
-        echo "Success: gzip compressed data, from Unix."
-    else
-        echo "Warning: The archive is not gzip compressed as expected."
-    fi
-
+    # Check the compression format
+    file "${ARCHIVE_FILE}"  # This will output details like 'gzip compressed data, from Unix'
     # Remove the uncompressed dump file to save space
     rm -f "${DUMP_FILE}"
 else
