@@ -1,0 +1,8 @@
+[mysqld]
+server-id=2
+relay-log=mysql-relay-bin
+log_bin=mysql-bin
+read_only=1
+bind-address=0.0.0.0   # Allow connections from any IP
+port=3306             # Default MySQL port
+

@@ -1,0 +1,8 @@
+[mysqld]
+server-id=1
+log_bin=mysql-bin
+binlog_do_db=tyrell_corp
+# skip-networking   # Ensure this is commented
+bind-address=0.0.0.0   # Allow connections from any IP
+port=3306             # Default MySQL port
+
